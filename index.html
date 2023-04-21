@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+
+  <title>Document</title>
+</head>
+
+<body>
+  <form>
+    <h1>Dziennik praktyki zawodowej</h1>
+    <label for="links">
+      <nav>
+        <ul>
+          <li><button type="button" id="menu_Btn">Home</button></li>
+          <li>
+            <button type="button" id="logbook_Btn">Dziennik zajęć</button>
+          </li>
+          <li>
+            <button type="button" id="summary_Btn">Podsumowanie</button>
+          </li>
+        </ul>
+      </nav>
+    </label>
+    <div id="menu">
+      <label for="name">
+        Imię:
+        <input type="text" name="name" id="name" value="imie" />
+      </label>
+      <label for="surname">
+        Nazwisko:
+        <input type="text" name="surname" id="surname" value="nazwisko" />
+      </label>
+      <label for="studentClass">
+        Klasa:
+        <input type="text" name="studentClass" id="studentClass" value="7" />
+      </label>
+      <label for="date">
+        Rok szkolny:
+        <input type="text" name="date" id="date" value="1269" />
+      </label>
+      <label for="place">
+        Odbytej w:
+        <input type="text" name="when" id="place" value="fenix" />
+      </label>
+      <fieldset>
+        <legend>Czas trwania praktyk</legend>
+        <label for="dateStart">
+          Data rozpoczęcia:
+          <input type="date" id="dateStart" value="2023-09-10" />
+        </label>
+        <label for="dateEnd">
+          Data zakończenia:
+          <input type="date" id="dateEnd" value="2023-10-10" />
+        </label>
+      </fieldset>
+      <button type="button" id="confirm">zatwierdź</button>
+    </div>
+
+    <div class="hidden" id="logbook">
+      <h2>Realizacja materiału</h2>
+      <fieldset>
+        <legend>Informacja o zajęciach</legend>
+        <label for="date">
+          Wybierz date zajęć
+          <input type="date" />
+        </label>
+        <label for="dial">
+          Wybierz dział i temat
+          <select id="dzial">
+          </select>
+        </label>
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend>Opiekun</legend>
+        <input type="radio" name="supervisor" />Adam Adamowicz
+        <input type="radio" name="supervisor" />Adam Gawlik
+        <input type="radio" name="supervisor" />Wilhelm Hojny
+      </fieldset>
+
+      <fieldset>
+        <legend>Realizacja materiału</legend>
+
+        <label for="">Sprawozdanie:
+          <textarea name="text" id="textBox" cols="32" rows="7"></textarea></label>
+        <label for="">Opanowanych godzin:
+          <input type="number" min="1" max="10" /> </label>
+        <label for=""> Stopień
+          opanowania materiału 1 <input type="range" step="1" min="1" max="6" /> 6</label>
+      </fieldset>
+      <button type="button" id="dodaj">dodaj</button>
+    </div>
+
+    <div class="hidden" id="summary">
+      <div class="note" id="display">
+        tu tekst powinien sie pojawiac
+      </div>
+      <div class="note">
+        <ol>
+          <li>Naprawa sprzętu komputerowego, zrealizowano<b> / 20h</b></li>
+          <li>Sieci komputerowe, zrealizowano<b> / 20h</b></li>
+          <li>
+            Programowanie aplikacji internetowych, zrealizowano<b> / 20h</b>
+          </li>
+        </ol>
+      </div>
+      <div class="grade">ocena końcowa: 2 (dop)</div>
+    </div>
+
+    <footer>&copy Filip Bednarek</footer>
+  </form>
+</body>
+<script src="main.js"></script>
+
+</html>
